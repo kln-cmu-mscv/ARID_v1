@@ -1,0 +1,8 @@
+ln -sf /home/srinitca/vlr/project/ARID_Dataset_v1/Version_1/avi/  /home/srinitca/vlr/project/Git/ARID_v1-master/dataset/ARID/raw/data
+
+# Using pretrained models
+python train_arid11.py --network resnet --pretrained_3d ./network/pretrained/r3d_18-b3b3357e.pth --task-name train_r3d  --gpus 0,1
+python train_arid11.py --network I3D --pretrained_3d ./network/pretrained/i3d_kinetics_rgb_inception_v1.pth --task-name train_r3d  --gpus 0,1
+
+# Trianing from scratch
+python train_arid11.py --network resnet --task-name train_r3d_scratch  --gpus 2,3 --end-epoch 200 --is-dark
