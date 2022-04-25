@@ -37,7 +37,7 @@ parser.add_argument('--log-file', type=str, default="",
 parser.add_argument('--gpus', type=str, default="0,1,2,3,4,5,6,7",
                     help="define gpu id")
 # algorithm
-parser.add_argument('--network', type=str, default='RESNEXT',
+parser.add_argument('--network', type=str, default='RESNET',
                     help="chose the base network")
 # initialization with priority (the next step will overwrite the previous step)
 # - step 1: random initialize

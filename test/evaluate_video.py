@@ -40,7 +40,7 @@ parser.add_argument('--log-file', type=str, default="./eval-hmdb51-0324.log",
 parser.add_argument('--gpus', type=str, default="0,1,2,3,4,5,6,7",
 					help="define gpu id")
 # algorithm
-parser.add_argument('--network', type=str, default='resnext',
+parser.add_argument('--network', type=str, default='RESNET',
 					help="choose the base network")
 # evaluation
 parser.add_argument('--load-epoch', type=int, default=50,
